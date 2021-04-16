@@ -1,0 +1,59 @@
+1. dig
+
+# dig facebook.com
+
+; <<>> DiG 9.11.4-P2-RedHat-9.11.4-26.P2.el7_9.4 <<>> facebook.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 38420
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 4, ADDITIONAL: 9
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 4096
+;; QUESTION SECTION:
+;facebook.com.                  IN      A
+
+;; ANSWER SECTION:
+facebook.com.           233     IN      A       157.240.7.35
+
+;; AUTHORITY SECTION:
+facebook.com.           27452   IN      NS      d.ns.facebook.com.
+facebook.com.           27452   IN      NS      a.ns.facebook.com.
+facebook.com.           27452   IN      NS      b.ns.facebook.com.
+facebook.com.           27452   IN      NS      c.ns.facebook.com.
+
+;; ADDITIONAL SECTION:
+d.ns.facebook.com.      37692   IN      A       185.89.219.12
+c.ns.facebook.com.      37692   IN      A       185.89.218.12
+b.ns.facebook.com.      37692   IN      A       129.134.31.12
+a.ns.facebook.com.      37692   IN      A       129.134.30.12
+d.ns.facebook.com.      27654   IN      AAAA    2a03:2880:f1fd:c:face:b00c:0:35
+c.ns.facebook.com.      27654   IN      AAAA    2a03:2880:f1fc:c:face:b00c:0:35
+b.ns.facebook.com.      27654   IN      AAAA    2a03:2880:f0fd:c:face:b00c:0:35
+a.ns.facebook.com.      27654   IN      AAAA    2a03:2880:f0fc:c:face:b00c:0:35
+
+;; Query time: 0 msec
+;; SERVER: 192.168.0.254#53(192.168.0.254)
+;; WHEN: Fri Apr 16 10:39:00 +06 2021
+;; MSG SIZE  rcvd: 300
+
+2. Nslookup
+
+# nslookup
+> facebook.com
+Server:         192.168.0.254
+Address:        192.168.0.254#53
+
+Non-authoritative answer:
+Name:   facebook.com
+Address: 157.240.7.35
+Name:   facebook.com
+Address: 2a03:2880:f10c:83:face:b00c:0:25de
+
+
+3. Telnet 
+
+# telnet 185.89.219.12 443
+Trying 185.89.219.12...
+
+
